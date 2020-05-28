@@ -40,9 +40,9 @@
 
 <p><code>sudo apt install qemu-kvm</code></p>
 
-<p><code>sudo adduser cod3r kvm</code></p>
+<p><code>sudo adduser XXXX kvm</code></p>
 
-<p><code>sudo chown cod3r /dev/kvm</code></p>
+<p><code>sudo chown XXXX /dev/kvm</code></p>
 
 <p><b>4. Variaveis de Ambiente (.bashrc)</b></p>
 
