@@ -6,92 +6,64 @@
 
 <h3>Algumas instruções...</h3>
 
-<p>1. Instalar Java</p>
+<p><b>1. Instalar Java</b></p>
 
-<p><code>sudo apt update</code></p>sudo apt update
+<p><code>sudo apt update</code></p>
 
-sudo apt install default-jdk
+<p><code>sudo apt install default-jdk</code></p>
 
-============================================================
+<p><b>2. Instalar Node & NPM</b></p>
 
+<p><code>sudo apt-get update</code></p>
 
+<p><code>sudo apt-get install curl</code></p>
 
-2. Instalar Node & NPM
+<p><code>curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -</code></p>
 
-============================================================
+<p><code>sudo apt-get install -y nodejs</code></p>
 
-sudo apt-get update
+<p><b>3. Instalar Android Studio</b>(em ordem)</p>
 
-sudo apt-get install curl
+<p>Baixar Android Studio em: https://developer.android.com/studio</p>
 
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+<p>Descompactar e jogar a pasta 'android-studio' na home.</p>
 
-sudo apt-get install -y nodejs
+<p>Terminal -> cd android-studio -> cd bin -> ./studio.sh</p>
 
-============================================================
+<p>Custom Installation -> Selecionar Tema -> Marcar Android Virtual Device</p>
 
+<p>Android Studio -> Configure -> AVD Manager ( Verificar se o Dispositivo Padrão foi criado )</p>
 
+<p>OBS: Instalar qualquer item do SDK Tools para aceitar as licenças.</p>
 
-3. Instalar Android Studio
+<p><b>3.1 Caso erro /dev/kvm device: permission denied</b></p>
 
-============================================================
+<p><code>sudo apt install qemu-kvm</code></p>
 
-1- Baixar Android Studio em: https://developer.android.com/studio
+<p><code>sudo adduser cod3r kvm</code></p>
 
-2- Descompactar e jogar a pasta 'android-studio' na home.
+<p><code>sudo chown cod3r /dev/kvm</code></p>
 
-3- Terminal -> cd android-studio -> cd bin -> ./studio.sh
+<p><b>4. Variaveis de Ambiente (.bashrc)</b></p>
 
-4- Custom Installation -> Selecionar Tema -> Marcar Android Virtual Device
+<p><code>export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64</code></p>
 
-5- Android Studio -> Configure -> AVD Manager ( Verificar se o Dispositivo Padrão foi criado )
+<p><code>export ANDROID_HOME=$HOME/Android/Sdk</code></p>
 
-OBS: Instalar qualquer item do SDK Tools para aceitar as licenças.
+<p><code>export PATH=$PATH:$ANDROID_HOME/emulator</code></p>
 
-=============================================================
+<p><code>export PATH=$PATH:$ANDROID_HOME/tools</code></p>
 
-3.1 Caso erro /dev/kvm device: permission denied
+<p><code>export PATH=$PATH:$ANDROID_HOME/tools/bin</code></p>
 
-=============================================================
+<p><code>export PATH=$PATH:$ANDROID_HOME/platform-tools</code></p>
 
-sudo apt install qemu-kvm
+<p><b>5. React Native & Projeto</b></p>
 
-sudo adduser cod3r kvm
+<p><code>sudo npm i -g react-native-cli</code></p>
 
-sudo chown cod3r /dev/kvm
+<p><code>react-native init exercicios</code></p>
 
-=============================================================
+<p><code>react-native start</code></p>
 
-
-
-4. Variaveis de Ambiente (.bashrc)
-
-=============================================================
-
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64
-
-export ANDROID_HOME=$HOME/Android/Sdk
-
-export PATH=$PATH:$ANDROID_HOME/emulator
-
-export PATH=$PATH:$ANDROID_HOME/tools
-
-export PATH=$PATH:$ANDROID_HOME/tools/bin
-
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
-=============================================================
-
-
-
-5. React Native & Projeto
-
-=============================================================
-
-sudo npm i -g react-native-cli
-
-react-native init exercicios
-
-react-native start
-
-react-native run-android
+<p><code>react-native run-android</code></p>
